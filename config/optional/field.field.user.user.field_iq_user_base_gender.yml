@@ -1,0 +1,24 @@
+uuid: a2067d60-549a-4483-bc50-90ef43152b4c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iq_user_base_gender
+  module:
+    - user
+id: user.user.field_iq_user_base_gender
+field_name: field_iq_user_base_gender
+entity_type: user
+bundle: user
+label: Gender
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Male
+  off_label: Female
+field_type: boolean

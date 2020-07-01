@@ -1,0 +1,21 @@
+uuid: 73aafec8-84bc-4e0d-b42a-32476687a214
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iq_user_base_phone
+  module:
+    - telephone
+    - user
+id: user.user.field_iq_user_base_phone
+field_name: field_iq_user_base_phone
+entity_type: user
+bundle: user
+label: 'Telephone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

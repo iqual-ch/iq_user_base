@@ -1,0 +1,20 @@
+uuid: 8517dc25-28ae-40d3-bdd9-f7e3a0c7b55f
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+    - user
+id: user.field_iq_user_base_profile
+field_name: field_iq_user_base_profile
+entity_type: user
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

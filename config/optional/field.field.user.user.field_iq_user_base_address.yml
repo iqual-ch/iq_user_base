@@ -1,0 +1,47 @@
+uuid: 1788a2a8-870e-4838-bb2d-8650792f2e8d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iq_user_base_address
+  module:
+    - address
+    - user
+id: user.user.field_iq_user_base_address
+field_name: field_iq_user_base_address
+entity_type: user
+bundle: user
+label: Address
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: de
+    country_code: CH
+    administrative_area: null
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: ''
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: optional
+    familyName:
+      override: optional
+    addressLine1:
+      override: optional
+    locality:
+      override: optional
+  fields: {  }
+field_type: address

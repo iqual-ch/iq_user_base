@@ -1,0 +1,31 @@
+uuid: ed3355f2-a0e4-486e-9226-ac63a87f35fe
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iq_user_base_profile
+    - media.type.image
+    - media.type.iqbm_image
+  module:
+    - user
+id: user.user.field_iq_user_base_profile
+field_name: field_iq_user_base_profile
+entity_type: user
+bundle: user
+label: 'Profile picture'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      iqbm_image: iqbm_image
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: iqbm_image
+field_type: entity_reference

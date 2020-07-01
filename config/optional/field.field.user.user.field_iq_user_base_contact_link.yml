@@ -1,0 +1,23 @@
+uuid: 80007b91-dd80-41f2-94db-aedde4a5a056
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iq_user_base_contact_link
+  module:
+    - link
+    - user
+id: user.user.field_iq_user_base_contact_link
+field_name: field_iq_user_base_contact_link
+entity_type: user
+bundle: user
+label: 'Contact link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

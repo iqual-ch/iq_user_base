@@ -1,0 +1,19 @@
+uuid: 70324251-ded8-45d4-869a-56e5b4c1114d
+langcode: de
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_iq_user_base_contact_link
+field_name: field_iq_user_base_contact_link
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
