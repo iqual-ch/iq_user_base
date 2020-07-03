@@ -1,0 +1,14 @@
+{
+  "name": "iqual/iq_user_base",
+  "description":   "Provides functionality for project offers.",
+  "type": "drupal-custom-module",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://github.com/iqual-ch/iq_user_base"
+    }
+  ],
+  "require": {
+    "drupal/address": "*"
+  }
+}

@@ -37,11 +37,25 @@ settings:
   field_overrides:
     givenName:
       override: optional
+    additionalName:
+      override: hidden
     familyName:
       override: optional
+    organization:
+      override: hidden
     addressLine1:
       override: optional
+    addressLine2:
+      override: hidden
+    postalCode:
+      override: optional
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
     locality:
       override: optional
+    administrativeArea:
+      override: hidden
   fields: {  }
 field_type: address
