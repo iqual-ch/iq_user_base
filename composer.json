@@ -9,6 +9,7 @@
     }
   ],
   "require": {
-    "drupal/address": "*"
+    "drupal/address": "*",
+    "drupal/address_formatter": "^2.0"
   }
 }
