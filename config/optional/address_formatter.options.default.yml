@@ -1,0 +1,33 @@
+uuid: 0bbc5d86-c349-4e14-bd31-ff9ab8782256
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NrFYIcjbPuJPFeYD09xerLJYgQLtTRP_BMtzD-xab-s
+id: default
+label: Default
+options:
+  CH-de:
+    country: CH
+    language: de
+    template:
+      value: "<p><b>Vorname</b><br />\r\n%given_name%<br />\r\n<br />\r\n<b>Nachname</b><br />\r\n%family_name%</p>\r\n"
+      format: structure
+  CH-en:
+    country: CH
+    language: en
+    template:
+      value: "<p><b>First name</b><br />\r\n%given_name%<br />\r\n<br />\r\n<b>Last name</b><br />\r\n%family_name%</p>\r\n"
+      format: structure
+  CH-fr:
+    country: CH
+    language: fr
+    template:
+      value: "<p><b>Prénom</b><br />\r\n%given_name%<br />\r\n<br />\r\n<b>Nom</b><br />\r\n%family_name%</p>\r\n"
+      format: structure
+  CH-it:
+    country: CH
+    language: it
+    template:
+      value: "<p><b>Nome</b><br />\r\n%given_name%<br />\r\n<br />\r\n<b>Cognome</b><br />\r\n%family_name%</p>\r\n"
+      format: structure
