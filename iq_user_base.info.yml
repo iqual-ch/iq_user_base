@@ -2,7 +2,7 @@ name: iQual User Base Module
 description: Module that provides basic account configuration
 package: Custom
 type: module
-core: 8.x
+core_version_requirement: 8.8 - 9.4
 dependencies:
   - drupal:address
   - drupal:address_formatter
