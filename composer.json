@@ -10,6 +10,7 @@
   ],
   "require": {
     "drupal/address": "*",
-    "drupal/address_formatter": "^2.0"
+    "drupal/address_formatter": "^2.0",
+    "drupal/email_registration": "*"
   }
 }
