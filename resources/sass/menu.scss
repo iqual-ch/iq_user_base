@@ -1,0 +1,30 @@
+@import "definitions";
+
+// User Area Menu styles
+//
+// Styles can be found on the /user, /user/orders and /user/edit pages.
+//
+// Associated Twig template: navigation/menu--user-area-menu.html.twig
+
+.menu--user-area-menu {
+  display: flex;
+  flex-direction: column;
+
+  .nav-link {
+    padding-left: 0;
+    padding-right: 15px;
+    color: $color-link;
+    text-decoration: $text-decoration-link;
+
+    &:hover,
+    &:focus {
+      color: $color-link-hover;
+      text-decoration: $text-decoration-link-hover;
+    }
+
+    &.active {
+      color: $color-link-hover;
+      text-decoration: $text-decoration-link-hover;
+    }
+  }
+}

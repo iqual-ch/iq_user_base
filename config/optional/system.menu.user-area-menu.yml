@@ -1,0 +1,8 @@
+uuid: c53a18af-d2f2-4959-aa8f-9c69a9a6adc9
+langcode: de
+status: true
+dependencies: {  }
+id: user-area-menu
+label: 'User Area Menu'
+description: ''
+locked: false
