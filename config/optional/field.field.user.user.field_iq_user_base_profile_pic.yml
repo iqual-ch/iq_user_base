@@ -1,0 +1,30 @@
+uuid: f6d0699e-156d-43d4-9359-e47e4ebe4976
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iq_user_base_profile_pic
+    - media.type.image
+  module:
+    - user
+id: user.user.field_iq_user_base_profile_pic
+field_name: field_iq_user_base_profile_pic
+entity_type: user
+bundle: user
+label: 'Profile picture'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

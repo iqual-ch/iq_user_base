@@ -6,25 +6,28 @@
 //
 // Associated Twig template: navigation/menu--user-area-menu.html.twig
 
-.menu--user-area-menu {
-  display: flex;
-  flex-direction: column;
+.iq-user-area {
+  .menu--user-area-menu {
+    display: flex;
+    flex-direction: column;
 
-  .nav-link {
-    padding-left: 0;
-    padding-right: 15px;
-    color: $color-link;
-    text-decoration: $text-decoration-link;
+    .nav-link {
+      padding: 0;
+      margin-bottom: 0.5rem;
+      color: $color-font-navbar;
+      font-family: $navi-main-font-family;
+      font-style: $navi-main-font-style;
+      font-size: $navi-main-font-size;
+      font-weight: $navi-main-font-weight;
+      line-height: $navi-main-line-height;
+      text-transform: $navi-main-text-transform;
+      text-decoration: none;
 
-    &:hover,
-    &:focus {
-      color: $color-link-hover;
-      text-decoration: $text-decoration-link-hover;
-    }
-
-    &.active {
-      color: $color-link-hover;
-      text-decoration: $text-decoration-link-hover;
+      &:hover,
+      &:focus,
+      &.active {
+        color: $color-font-navbar-hover;
+      }
     }
   }
 }

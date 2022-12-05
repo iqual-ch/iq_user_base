@@ -1,0 +1,33 @@
+uuid: 878ea341-c732-45b0-abf0-5bbe0cd84058
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_iq_user_base_address
+    - field.field.user.user.field_iq_user_base_contact_link
+    - field.field.user.user.field_iq_user_base_gender
+    - field.field.user.user.field_iq_user_base_phone
+    - field.field.user.user.field_iq_user_base_position
+    - field.field.user.user.field_iq_user_base_profile_pic
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content: {  }
+hidden:
+  commerce_remote_id: true
+  customer_profiles: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_iq_user_base_address: true
+  field_iq_user_base_contact_link: true
+  field_iq_user_base_gender: true
+  field_iq_user_base_phone: true
+  field_iq_user_base_position: true
+  field_iq_user_base_profile_pic: true
+  langcode: true
+  member_for: true

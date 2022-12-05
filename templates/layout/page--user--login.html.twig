@@ -96,17 +96,23 @@
     <section class="section">
       <a id="main-content" tabindex="-1"></a>
 
-      <div class="login-container">
-        <h1>{{ 'Login'|t }}</h1>
-        <div class="login-flex-container">
-          <div class="login-form-container">
-            <h4>{{ 'Mit Kundenkonto anmelden'|t }}</h4>
-            {{ page.content }}
-            <a href="/user/password" class="login-forgot-password">{{'Password vergassen?'|t}}</a>
-          </div>
-          <div class="create-account-container">
-            <h4 >{{'Neues Kundenkonto erstellen'|t}}</h4>
-            <a class="btn btn-primary" href="/user/register">{{'Konto erstellen'|t}}</a>
+      <div class="iq-row row iq-login-register-pane">
+        <div class="iq-column col">
+          <h1>{{ 'Login'|t }}</h1>
+          <div class="iq-row row fullwidth">
+            <div class="iq-column col-xs-12 col-md-7">
+              <div class="iq-login-register-pane__column login">
+                <h4>{{ 'Mit Kundenkonto anmelden'|t }}</h4>
+                {{ page.content }}
+                <a href="/user/password" class="iq-login-register-pane__forgot-password">{{'Password vergassen?'|t}}</a>
+              </div>
+            </div>
+            <div class="iq-column col-xs-12 col-md-5">
+              <div class="iq-login-register-pane__column register">
+                <h4 >{{'Neues Kundenkonto erstellen'|t}}</h4>
+                <a class="btn btn-primary" href="/user/register">{{'Konto erstellen'|t}}</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

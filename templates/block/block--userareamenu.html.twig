@@ -31,6 +31,8 @@
 * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
 */
 #}
+
+{{ attach_library('iq_user_base/iq-account') }}
 {%
 set classes = [
 'block',
@@ -53,14 +55,17 @@ set classes = [
 
     {# Menu. #}
     {% block content %}
-    <div class='nav-holder'>
+    <div class='iq-account'>
       {% if user.isAnonymous() %}
-        <span class="user-account-name">{{"Login/Create account"|t}}</span>
+        <a href='/user'>
+          <span class="iq-account__text iq-account__text--login">{{"Login/Create account"|t}}</span>
+          <i class='iq-account__icon fa fa-user-circle-o'></i>
+        </a>
       {% else %}
-        <span class="user-account-name">{{ user.name.value }}</span>
+        <span class="iq-account__text iq-account__text--name">{{ 'Hello'|t }}, {{ name }}</span>
+        <i class='iq-account__icon fa fa-user-circle-o'></i>
+        {{ content }}
       {% endif %}
-      <i class='fa fa-user-circle-o'></i>
-      {{ content }}
     </div>
     {% endblock %}
 </nav>

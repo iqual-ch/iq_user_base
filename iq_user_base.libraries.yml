@@ -2,19 +2,20 @@ user:
   css:
     theme:
       resources/css/customer.css: {}
-      resources/css/user-forms.css: {}
-      resources/css/account-nav.css: {}
-  js:
-    resources/js/account-nav.js: {}
 
 iq-user-area-menu:
   css:
     theme:
       resources/css/menu.css: {}
-  js:
-    resources/js/user-area.js: {}
 
 iq-user-forms:
   css:
     theme:
       resources/css/forms.css: {}
+
+iq-account:
+  css:
+    theme:
+      resources/css/account-dropdown.css: {}
+  js:
+    resources/js/account-dropdown.js: {}

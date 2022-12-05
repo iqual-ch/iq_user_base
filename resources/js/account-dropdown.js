@@ -1,8 +1,8 @@
 (function ($, Drupal) {
 
   /* User login menu dropdown (MyAccount) */
-  $('.nav-holder').hover(function () {
-    const dropdownMenu = $(this).children('.nav-holder > .nav');
+  $('.iq-account').hover(function () {
+    const dropdownMenu = $(this).children('.iq-account > .nav');
     if (dropdownMenu.is(':visible')) {
       dropdownMenu.toggleClass('expanded');
     }
