@@ -6,6 +6,8 @@ dependencies:
     - field.storage.user.field_iq_user_base_gender
   module:
     - user
+_core:
+  default_config_hash: CFX8bkIUX2TCG_gYjuI9SctwanegVpYBzUQ2ETCOHDk
 id: user.user.field_iq_user_base_gender
 field_name: field_iq_user_base_gender
 entity_type: user
@@ -19,6 +21,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: Male
-  off_label: Female
+  on_label: Female
+  off_label: Male
 field_type: boolean
