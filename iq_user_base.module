@@ -47,17 +47,6 @@ function iq_user_base_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_preprocess_user().
- */
-function iq_user_base_preprocess_user(&$variables) {
-  /** @var User $account */
-  $account = $variables['elements']['#user'];
-
-  $created = $account->getCreatedTime();
-  $variables['created'] = \Drupal::service('date.formatter')->format($created, 'custom', 'd.m.Y');
-}
-
-/**
  * Implements hook_preprocess_block__userareamenu().
  */
 function iq_user_base_preprocess_block__userareamenu(&$variables) {
