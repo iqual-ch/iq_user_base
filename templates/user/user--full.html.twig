@@ -16,10 +16,11 @@
    * @see template_preprocess_user()
    */
   #}
-  <article{{ attributes.addClass('profile') }}>
+  <article{{ attributes.addClass('profile iq-profile') }}>
 
     {% if user.field_iq_user_base_profile_pic is not empty %}
-      <p><strong>{{ 'Profile picture'|t }}</strong></p>
+    <div class="iq-profile__image">
+      <p class="iq-profile__label">{{ 'Profile picture'|t }}</p>
       {% include '@iq_barrio/includes/responsive-image.html.twig' with {
         'image' : user.field_iq_user_base_profile_pic.0.entity.field_media_image.0.entity.uri.value,
         'template' : 'image_standard',
@@ -29,40 +30,55 @@
           title: user.name.value,
         }
       } %}
+    </div>
     {% endif %}
 
     {% if user.field_iq_user_base_address is not empty %}
-      <p><strong>{{ 'Full name'|t }}</strong></p>
-      <p>{{ user.field_iq_user_base_address.0.given_name }} {{ user.field_iq_user_base_address.0.family_name }}</p>
-      <p><strong>{{ 'Address'|t }}</strong></p>
-      <span>{{ user.field_iq_user_base_address.0.address_line1 }},</span><br />
-      <p>{{ user.field_iq_user_base_address.0.country_code }} {{ user.field_iq_user_base_address.0.postal_code }} {{ user.field_iq_user_base_address.0.locality }}</p>
+    <div class="iq-profile__address">
+      <p class="iq-profile__label">{{ 'Full name'|t }}</p>
+      <p class="iq-profile__value">{{ user.field_iq_user_base_address.0.given_name }} {{ user.field_iq_user_base_address.0.family_name }}</p>
+      <p class="iq-profile__label">{{ 'Address'|t }}</p>
+      <span class="iq-profile__value">{{ user.field_iq_user_base_address.0.address_line1 }},</span><br />
+      <p class="iq-profile__value">{{ user.field_iq_user_base_address.0.country_code }} {{ user.field_iq_user_base_address.0.postal_code }} {{ user.field_iq_user_base_address.0.locality }}</p>
+    </div>
     {% endif %}
 
-    <p><strong>{{ 'Username'|t }}</strong></p>
-    <p>{{ user.name.value }}</p>
+    <div class="iq-profile__username">
+      <p class="iq-profile__label">{{ 'Username'|t }}</p>
+      <p class="iq-profile__value">{{ user.name.value }}</p>
+    </div>
 
-    <p><strong>{{ 'E-mail address'|t }}</strong></p>
-    <p><a href="mailto:{{ user.mail.value }}" title="{{ user.name.value }}'s {{ 'E-mail address'|t }}">{{ user.mail.value }}</a></p>
+    <div class="iq-profile__e-mail">
+      <p class="iq-profile__label">{{ 'E-mail address'|t }}</p>
+      <p class="iq-profile__value"><a href="mailto:{{ user.mail.value }}" title="{{ user.name.value }}'s {{ 'E-mail address'|t }}">{{ user.mail.value }}</a></p>
+    </div>
 
     {% if user.field_iq_user_base_position is not empty %}
-      <p><strong>{{ 'Position'|t }}</strong></p>
-      <p>{{ user.field_iq_user_base_position.0.value }}</p>
+    <div class="iq-profile__position">
+      <p class="iq-profile__label">{{ 'Position'|t }}</p>
+      <p class="iq-profile__value">{{ user.field_iq_user_base_position.0.value }}</p>
+    </div>
     {% endif %}
 
     {% if user.field_iq_user_base_gender is not empty %}
-      <p><strong>{{ 'Gender'|t }}</strong></p>
-      <p>{{ user.field_iq_user_base_gender.0.value }}</p>
+    <div class="iq-profile__gender">
+      <p class="iq-profile__label">{{ 'Gender'|t }}</p>
+      <p class="iq-profile__value">{{ user.field_iq_user_base_gender.0.value }}</p>
+    </div>
     {% endif %}
 
     {% if user.field_iq_user_base_phone is not empty %}
-      <p><strong>{{ 'Phone number'|t }}</strong></p>
-      <p><a href="tel:{{ user.field_iq_user_base_phone.0.value }}" title="{{ user.name.value }}'s {{ 'Phone number'|t }}">{{ user.field_iq_user_base_phone.0.value }}</a></p>
+    <div class="iq-profile__phone">
+      <p class="iq-profile__label">{{ 'Phone number'|t }}</p>
+      <p class="iq-profile__value"><a href="tel:{{ user.field_iq_user_base_phone.0.value }}" title="{{ user.name.value }}'s {{ 'Phone number'|t }}">{{ user.field_iq_user_base_phone.0.value }}</a></p>
+    </div>
     {% endif %}
 
     {% if user.field_iq_user_base_contact_link is not empty %}
-      <p><strong>{{ 'Contact link'|t }}</strong></p>
-      <p><a href="{{ user.field_iq_user_base_contact_link.0.uri }}" title="{{ user.name.value }}'s {{ 'Contact link'|t }}">{{ user.field_iq_user_base_contact_link.0.title }}</a></p>
+    <div class="iq-profile__contact-link">
+      <p class="iq-profile__label">{{ 'Contact link'|t }}</p>
+      <p class="iq-profile__value"><a href="{{ user.field_iq_user_base_contact_link.0.uri }}" title="{{ user.name.value }}'s {{ 'Contact link'|t }}">{{ user.field_iq_user_base_contact_link.0.title }}</a></p>
+    </div>
     {% endif %}
 
   </article>
