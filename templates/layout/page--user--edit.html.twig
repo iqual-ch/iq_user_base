@@ -89,18 +89,22 @@
 
 {% block content %}
 <div id="main" class="{{ container }}">
-  {% if page.breadcrumb %}
-    <div class="row iq-row iq-breadcrumb">
-      <div class="col">
-        {{ page.breadcrumb }}
+  {% if is_admin == false %}
+    {% if page.breadcrumb %}
+      <div class="row iq-row iq-breadcrumb">
+        <div class="col">
+          {{ page.breadcrumb }}
+        </div>
       </div>
-    </div>
+    {% endif %}
   {% endif %}
 
   <main{{ content_attributes }}>
     <div class="row iq-row iq-user-area">
       <div class="col-sm-12 col-md-3">
-        {{ drupal_menu('user-area-menu') }}
+        {% if is_admin == false %}
+          {{ drupal_menu('user-area-menu') }}
+        {% endif %}
       </div>
       <div class="col-sm-12 col-md-9">
         <section class="section">
