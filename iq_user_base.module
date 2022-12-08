@@ -53,6 +53,7 @@ function iq_user_base_preprocess_block__userareamenu(&$variables) {
   if (!in_array('anonymous', $variables['user']->getRoles())) {
     $variables['name'] = $variables['user']->getDisplayName();
   }
+  $variables['destination'] = Url::fromRoute('<current>')->toString();
 }
 
 /**
@@ -62,11 +63,8 @@ function iq_user_base_preprocess_menu__user_area_menu(&$variables) {
   foreach ($variables['items'] as &$item) {
     $current = Url::fromRoute('<current>');
     $url = $item['url'];
-    $exploded = explode('/', $current->toString());
-    unset($exploded['3']);
-    $imploded = implode('/', $exploded);
-
-    if ($imploded == $url->toString()) {
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    if ($current->toString() == '/' . $language . $url->toString()) {
       $item['in_active_trail'] = TRUE;
     }
     else {
