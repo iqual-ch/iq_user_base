@@ -7,3 +7,4 @@ dependencies:
   - drupal:address
   - drupal:address_formatter
   - email_registration:email_registration
+  - drupal:swiftmailer

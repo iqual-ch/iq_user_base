@@ -1,6 +1,6 @@
 {
   "name": "iqual/iq_user_base",
-  "description":   "Provides functionality for project offers.",
+  "description": "Provides functionality for project offers.",
   "type": "drupal-custom-module",
   "repositories": [
     {
@@ -11,6 +11,7 @@
   "require": {
     "drupal/address": "*",
     "drupal/address_formatter": "^2.0",
-    "drupal/email_registration": "*"
+    "drupal/email_registration": "*",
+    "drupal/swiftmailer": "*"
   }
 }
