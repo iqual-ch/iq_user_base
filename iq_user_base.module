@@ -76,3 +76,13 @@ function iq_user_base_preprocess_menu__user_area_menu(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_swiftmailer().
+ */
+function iq_user_base_preprocess_swiftmailer(&$variables) {
+  $logoPath = \Drupal::config('iq_custom.settings')->get('logo.path');
+  if ($wrapper = \Drupal::service('stream_wrapper_manager')->getViaUri($logoPath)) {
+    $variables['path_to_logo'] = $wrapper->getExternalUrl();
+  }
+}
