@@ -1,0 +1,47 @@
+<mjml>
+  <mj-body>
+
+    <!-- Logo section -->
+    <mj-section>
+      <mj-column>
+
+        <!-- Image -->
+        <mj-image padding="0" width="150px" src="https://www.drupal.org/files/Logo-Iqual-Orange-2017-mit-rahmen.png" align="left"></mj-image>
+
+      </mj-column>
+    </mj-section>
+
+
+    <!-- Content section -->
+    <mj-section>
+      <mj-column>
+
+        <!-- Content -->
+        <mj-text font-size="16px" color="#333333" font-family="helvetica">
+          Password reset text
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider -->
+    <mj-section padding-top="0" padding-bottom="0">
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer section -->
+    <mj-section>
+      <mj-column>
+
+        <!-- Content -->
+      	<mj-text font-size="16px" color="#333333" font-family="helvetica">
+          Footer stuff
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  <mj-body>
+<mjml>

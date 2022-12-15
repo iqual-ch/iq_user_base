@@ -43,6 +43,10 @@ function iq_user_base_theme($existing, $type, $theme, $path) {
       'template' => 'user/user--full',
       'base hook' => 'user',
     ],
+    'swiftmailer__user' => [
+      'template' => 'swiftmailer/swiftmailer--user',
+      'base hook' => 'swiftmailer',
+    ],
   ];
 }
 
