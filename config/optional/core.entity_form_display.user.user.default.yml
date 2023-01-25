@@ -3,7 +3,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - entity_browser.browser.iq_image_browser
     - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_iq_user_base_address
     - field.field.user.user.field_iq_user_base_contact_link
@@ -13,8 +12,6 @@ dependencies:
     - field.field.user.user.field_iq_user_base_profile_pic
   module:
     - address
-    - entity_browser
-    - link
     - telephone
     - user
 id: user.user.default
@@ -23,72 +20,46 @@ bundle: user
 mode: default
 content:
   account:
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_iq_user_base_address:
     type: address_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_iq_user_base_contact_link:
-    type: link_default
-    weight: 6
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-  field_iq_user_base_gender:
-    type: options_buttons
-    weight: 3
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_iq_user_base_phone:
     type: telephone_default
-    weight: 5
+    weight: 3
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_iq_user_base_position:
     type: string_textfield
-    weight: 4
+    weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_iq_user_base_profile_pic:
-    type: entity_browser_entity_reference
-    weight: 0
-    region: content
-    settings:
-      entity_browser: iq_image_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: false
-      open: false
-      field_widget_display_settings:
-        view_mode: default
-      selection_mode: selection_append
-    third_party_settings: {  }
   language:
-    weight: 7
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 8
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   commerce_remote_id: true
   customer_profiles: true
+  field_iq_user_base_contact_link: true
+  field_iq_user_base_gender: true
+  field_iq_user_base_profile_pic: true
   langcode: true
   path: true
