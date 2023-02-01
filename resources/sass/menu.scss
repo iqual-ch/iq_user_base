@@ -1,12 +1,12 @@
 @import "definitions";
 
 // User Area Menu styles
-//
 // Styles can be found on the /user, /user/orders and /user/edit pages.
-//
 // Associated Twig template: navigation/menu--user-area-menu.html.twig
 
 .iq-user-area {
+  flex-wrap: wrap-reverse;
+
   .menu--user-area-menu {
     display: flex;
     flex-direction: column;
