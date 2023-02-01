@@ -5,7 +5,7 @@
 // Associated Twig template: navigation/menu--user-area-menu.html.twig
 
 .container-fluid .iq-row {
-  .iq-user-area {
+  &.iq-user-area {
     flex-wrap: wrap-reverse;
   
     .menu--user-area-menu {
