@@ -4,31 +4,28 @@
 // Styles can be found on the /user, /user/orders and /user/edit pages.
 // Associated Twig template: navigation/menu--user-area-menu.html.twig
 
-.container-fluid .iq-row {
-  &.iq-user-area {
-    flex-wrap: wrap-reverse;
-  
-    .menu--user-area-menu {
-      display: flex;
-      flex-direction: column;
-  
-      .nav-link {
-        padding: 0;
-        margin-bottom: 0.5rem;
-        color: $color-font-navbar;
-        font-family: $navi-main-font-family;
-        font-style: $navi-main-font-style;
-        font-size: $navi-main-font-size;
-        font-weight: $navi-main-font-weight;
-        line-height: $navi-main-line-height;
-        text-transform: $navi-main-text-transform;
-        text-decoration: none;
-  
-        &:hover,
-        &:focus,
-        &.active {
-          color: $color-font-navbar-hover;
-        }
+.iq-user-area {
+  .menu--user-area-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    .nav-link {
+      padding: 0;
+      margin-bottom: 0.5rem;
+      color: $color-font-navbar;
+      font-family: $navi-main-font-family;
+      font-style: $navi-main-font-style;
+      font-size: $navi-main-font-size;
+      font-weight: $navi-main-font-weight;
+      line-height: $navi-main-line-height;
+      text-transform: $navi-main-text-transform;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $color-font-navbar-hover;
       }
     }
   }
