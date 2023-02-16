@@ -2,6 +2,7 @@ iq-user-area-menu:
   css:
     theme:
       resources/css/menu.css: {}
+      resources/css/addresses.css: {}
 
 iq-user-forms:
   css:

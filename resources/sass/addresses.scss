@@ -1,0 +1,122 @@
+@import 'definitions';
+
+.address-book {
+  &__profiles {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &__add-link {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    display: inline-block;
+    padding: $padding-buttons;
+    font-size: $font-size-buttons;
+    font-weight: $font-weight-buttons;
+    font-style: $font-style-buttons;
+    font-family: $font-family-buttons;
+    line-height: $line-height-buttons;
+    color: $font-color-buttons;
+    text-decoration: none;
+    border-color: $border-color-buttons;
+    border-style: solid;
+    border-width: $border-width-buttons;
+    border-radius: $border-radius-buttons;
+    background: $background-color-buttons;
+    transition: $transition-default;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $background-color-hover-buttons;
+      color: $font-color-hover-buttons;
+      border-color: $border-color-hover-buttons;
+      text-decoration: none;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: calc(100% - 30px);
+    flex-basis: calc(100% - 30px);
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: $color-grey5;
+
+    @media screen and (min-width: $breakpoint-xs) {
+      padding: 30px;
+    }
+
+    @media screen and (min-width: $breakpoint-s) {
+      min-width: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+
+    .address {
+      margin-bottom: 10px;
+
+      @media screen and (min-width: $breakpoint-xs) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__operations {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    a {
+      display: inline-block;
+      padding: $padding-buttons;
+      font-size: $font-size-buttons;
+      font-weight: $font-weight-buttons;
+      font-style: $font-style-buttons;
+      font-family: $font-family-buttons;
+      line-height: $line-height-buttons;
+      color: $font-color-buttons;
+      text-decoration: none;
+      border-color: $border-color-buttons;
+      border-style: solid;
+      border-width: $border-width-buttons;
+      border-radius: $border-radius-buttons;
+      background: $background-color-buttons;
+      transition: $transition-default;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 10px;
+      text-align: center;
+
+      @media screen and (min-width: $breakpoint-xs) {
+        margin-top: 15px;
+        margin-right: 15px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $background-color-hover-buttons;
+        color: $font-color-hover-buttons;
+        border-color: $border-color-hover-buttons;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__edit-link {
+    order: 2;
+  }
+
+  &__delete-link {
+    order: 3;
+  }
+
+  &__set-default-link {
+    order: 1;
+  }
+}
