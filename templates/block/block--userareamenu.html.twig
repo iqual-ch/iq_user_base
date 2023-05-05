@@ -57,13 +57,13 @@ set classes = [
     {% block content %}
     <div class='iq-account'>
       {% if user.isAnonymous() %}
-        <a class="iq-account__link iq-account__link--login" href='/user/login?destination={{ destination }}'>
-          <span class="iq-account__text iq-account__text--login">{{"Login/Create account"|t}}</span>
+        <a class="iq-account__link" href='/user/login?destination={{ destination }}'>
+          <span class="iq-account__text">{{"Login/Create account"|t}}</span>
           <i class='iq-account__icon fa fa-user-circle-o'></i>
         </a>
       {% else %}
-        <a class="iq-account__link iq-account__link--user" href='/user'>
-          <span class="iq-account__text iq-account__text--name">{{ 'My account'|t }}</span>
+        <a class="iq-account__link" href='/{{ language }}/user'>
+          <span class="iq-account__text">{{ 'My account'|t }}</span>
           <i class='iq-account__icon fa fa-user-circle-o'></i>
         </a>
         {{ content }}
