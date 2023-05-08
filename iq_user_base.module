@@ -73,8 +73,7 @@ function iq_user_base_preprocess_menu__user_area_menu(&$variables) {
   foreach ($variables['items'] as &$item) {
     $current = Url::fromRoute('<current>');
     $url = $item['url'];
-    $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-    if ($current->toString() == '/' . $language . $url->toString()) {
+    if (preg_replace('/(\/[\d])/', '', $current->toString()) == $url->toString()) {
       $item['in_active_trail'] = TRUE;
     }
     else {
