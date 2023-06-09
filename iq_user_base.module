@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Contains iq_user_base.module.
  */
 
 use Drupal\Core\Language\LanguageInterface;
