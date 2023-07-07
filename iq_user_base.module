@@ -87,8 +87,7 @@ function iq_user_base_preprocess_menu__user_area_menu(&$variables) {
  * Implements hook_preprocess_swiftmailer().
  */
 function iq_user_base_preprocess_swiftmailer(&$variables) {
-  $activeTheme = \Drupal::theme()->getActiveTheme()->getName();
-  $logoPath = \Drupal::config($activeTheme . '.settings')->get('logo.path');
+  $logoPath = \Drupal::theme()->getActiveTheme()->getLogo();
   if ($wrapper = \Drupal::service('stream_wrapper_manager')->getViaUri($logoPath)) {
     $variables['path_to_logo'] = $wrapper->getExternalUrl();
   }
