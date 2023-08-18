@@ -12,6 +12,7 @@
     "drupal/address": "*",
     "drupal/address_formatter": "^2.0",
     "drupal/email_registration": "*",
-    "drupal/swiftmailer": "*"
+    "drupal/swiftmailer": "*",
+    "drupal/twig_tweak": "^2.0"
   }
 }
