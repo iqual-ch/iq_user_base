@@ -1,0 +1,47 @@
+uuid: 18c7da8a-69bc-46d0-8317-c86df88ba748
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.user-area-menu
+  module:
+    - advanced_menu_condition
+    - menu_block
+    - pagedesigner_block
+  theme:
+    - iq_custom
+id: userareamenu
+theme: iq_custom
+region: pagedesigner
+weight: 0
+provider: null
+plugin: 'menu_block:user-area-menu'
+settings:
+  id: 'menu_block:user-area-menu'
+  label: 'User Area Menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'user-area-menu:'
+  suggestion: user_area_menu
+visibility:
+  advanced_menu_position:
+    id: advanced_menu_position
+    menu_position:
+      '': ''
+    negate: null
+  advanced_menu_position_not:
+    id: advanced_menu_position_not
+    not_menu_position:
+      '': ''
+    negate: null
+  pagedesigner_condition:
+    id: pagedesigner_condition
+    pagedesigner_condition: 0
+    negate: null

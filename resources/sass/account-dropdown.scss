@@ -1,0 +1,102 @@
+@import 'definitions';
+
+/* Account user menu dropdown styles */
+
+.iq-account {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus:focus-within {
+
+    .iq-account__icon,
+    .iq-account__text {
+      color: $color-font-navbar-hover;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus:focus-within {
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 1;
+
+    &:before {
+      text-decoration: none;
+    }
+  }
+
+  &__text {
+    color: $color-font-navbar;
+    font-family: $navi-main-font-family;
+    font-style: $navi-main-font-style;
+    font-size: $navi-main-font-size;
+    font-weight: $navi-main-font-weight;
+    line-height: $navi-main-line-height;
+    text-transform: $navi-main-text-transform;
+    margin-right: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    z-index: 102;
+    background: $color-background-nav-dropdown;
+    border-color: $color-border-nav-dropdown;
+    border-style: solid;
+    border-width: $navi-sub-border-width;
+    transform: scale(0);
+    opacity: 0;
+
+    .nav-link {
+      position: relative;
+      color: $color-font-nav-dropdown;
+      font-family: $navi-sub-font-family;
+      font-weight: $navi-sub-font-weight;
+      font-style: $navi-sub-font-style;
+      line-height: $navi-sub-line-height;
+      font-size: $navi-sub-font-size;
+      text-transform: $navi-sub-text-transform;
+      padding: $navi-sub-padding;
+      text-decoration: none;
+      padding-right: 50px;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $color-border-nav-dropdown;
+      }
+
+      &:hover {
+        background: $color-background-nav-dropdown-hover;
+        color: $color-font-nav-dropdown-hover;
+      }
+    }
+  }
+
+  .active {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

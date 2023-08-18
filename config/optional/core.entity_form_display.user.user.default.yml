@@ -1,0 +1,65 @@
+uuid: a99db0b0-a508-4a3f-96e5-7e85929ebf77
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_iq_user_base_address
+    - field.field.user.user.field_iq_user_base_contact_link
+    - field.field.user.user.field_iq_user_base_gender
+    - field.field.user.user.field_iq_user_base_phone
+    - field.field.user.user.field_iq_user_base_position
+    - field.field.user.user.field_iq_user_base_profile_pic
+  module:
+    - address
+    - telephone
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_iq_user_base_address:
+    type: address_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_iq_user_base_phone:
+    type: telephone_default
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_iq_user_base_position:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  language:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  commerce_remote_id: true
+  customer_profiles: true
+  field_iq_user_base_contact_link: true
+  field_iq_user_base_gender: true
+  field_iq_user_base_profile_pic: true
+  langcode: true
+  path: true

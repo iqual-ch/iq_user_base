@@ -1,0 +1,20 @@
+@import 'definitions';
+
+// Login page styles
+.iq-login-register-pane,
+.iq-register-pane,
+.iq-password-pane {
+
+  &__column {
+    background-color: $color-grey5;
+    padding: 1rem;
+
+    @media screen and (min-width: $breakpoint-s) {
+      padding: 2rem;
+    }
+
+    @media screen and (min-width: $breakpoint-l) {
+      padding: 2.5rem;
+    }
+  }
+}
