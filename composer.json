@@ -13,5 +13,12 @@
     "drupal/core": "^9.5 || ^10",
     "drupal/address": "^1.0 || ^2.0",
     "drupal/address_formatter": "^2.0"
+  },
+  "extra": {
+    "patches": {
+      "drupal/address_formatter": {
+        "[https://dgo.to/3296528]: Automated Drupal 10 compatibility fixes": "https://git.drupalcode.org/project/address_formatter/-/merge_requests/1/diffs.diff?diff_id=656289"
+      }
+    }
   }
 }
